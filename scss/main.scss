@@ -1,0 +1,114 @@
+@import 'resets', 'config', 'responsive';
+
+.parent {
+    border-radius: $border-radius;
+    overflow: hidden;
+    max-width: 40rem;
+    margin: auto;
+}
+
+.parent > * {
+    padding: $paddingX $paddingY;
+}
+
+body {
+    background: $lt_gray;
+    font-family: 'Karla', sans-serif;
+    line-height: 1.15;
+    padding: $paddingX;
+    height: 100vh;
+}
+
+.community {
+    background-color: $white;
+    h2 {
+        color: $cyan;
+        font-size: 1.24rem;
+        margin-bottom: 1.7rem;
+    }
+
+    .subtitle {
+        color: $yellow;
+        font-size: 1rem;
+        margin-bottom: 1.1rem;
+        font-weight: bold;
+    }
+
+    p {
+        color: $grayish_blue;
+        font-size: .85rem;
+        line-height: 1.5rem;
+        margin: 0;
+    }
+}
+
+.price {
+    background-color: $cyan;
+    color: $lt_gray;
+    text-align: left;
+
+    h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1.3rem;
+    }
+
+    div {
+        font-size: 1.9rem;
+        font-weight: bold;
+        margin-bottom: .7rem;
+        display: flex;
+        align-items: center;
+    }
+
+    span {
+        opacity: .5;
+        font-size: 1rem;
+        font-weight: normal;
+        margin-left: .8rem;
+    }
+
+    p {
+        margin: 0 0 1.8rem 0;
+    }
+
+    a {
+        color: $lt_gray;
+        background-color: $yellow;
+        display: block;
+        text-align: center;
+        padding: 1rem;
+        border-radius: $border-radius-small;
+        box-shadow: 0 .5rem 1rem .2rem hsla(0, 0%, 0%, 0.1);
+        transition: .75s;
+        font-weight: bold;
+
+        &:hover {
+            background-color: darken($yellow, 10%);
+        }
+    }
+}
+
+.why {
+    background-color: lighten($cyan, 6%);
+    color: $white;
+    text-align: left;
+
+    h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1.3rem;
+    }
+
+    ul {
+        list-style: none;
+        color: $lt_gray;
+        margin: 0;
+        padding: 0;
+        font-size: .85rem;
+        opacity: .9;
+        line-height: 1.2rem;
+
+        li {
+            font-weight: normal;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.attribution { 
+    font-size: 11px; text-align: center;
+    a {
+        color: hsl(228, 45%, 44%); 
+    }
+}
+
+$paddingX: 1.8rem;
+$paddingY: 1.5rem;
+
+$white: hsl(0, 0%, 100%);
+$lt_gray: hsl(204, 43%, 93%);
+$grayish_blue: hsl(218, 22%, 67%);
+$cyan: hsl(179, 62%, 43%);
+$yellow: hsl(71, 73%, 54%);
+
+@mixin margin {
+    margin-bottom: 1rem;
+}
+
+@mixin margin_small {
+    margin-bottom: .5rem;
+}
+
+$border-radius: .5rem;
+$border-radius-small: .25rem;
+
+a {
+    text-decoration: none;
+}
+
+.parent {
+    @media only screen and (min-width: 62.5em) {
+        display: grid;
+    }
+}
+
+@mixin resp {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
