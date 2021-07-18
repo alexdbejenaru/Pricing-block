@@ -4,7 +4,8 @@
     border-radius: $border-radius;
     overflow: hidden;
     max-width: 40rem;
-    margin: auto;
+    min-width: 330px;
+    margin: 2rem;
 }
 
 .parent > * {
@@ -15,8 +16,12 @@ body {
     background: $lt_gray;
     font-family: 'Karla', sans-serif;
     line-height: 1.15;
-    padding: $paddingX;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 .community {
@@ -81,10 +86,41 @@ body {
         box-shadow: 0 .5rem 1rem .2rem hsla(0, 0%, 0%, 0.1);
         transition: .75s;
         font-weight: bold;
+        width: 100%;
+        font-size: 1rem;
+        max-width: 300px;
 
         &:hover {
             background-color: darken($yellow, 10%);
         }
+    }
+
+    .tooltip {
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-width: 300px;
+        flex-direction: column;
+        align-items: center;
+
+      .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        margin-top: 55px;
+        z-index: 1;
+      }
+
+      &:hover {
+        .tooltiptext {
+            visibility: visible;
+        }
+      }
     }
 }
 
@@ -109,6 +145,69 @@ body {
 
         li {
             font-weight: normal;
+        }
+    }
+}
+
+// Form Page
+
+.parent_form {
+    background-color: white;
+    height: 50%;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .form_title {
+        margin-bottom: 3rem;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-item {
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            label {
+                margin-bottom: .3rem;
+            }
+        }
+
+        a {
+            color: $lt_gray;
+            background-color: $yellow;
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            border-radius: $border-radius-small;
+            box-shadow: 0 .5rem 1rem .2rem hsla(0, 0%, 0%, 0.1);
+            transition: .75s;
+            font-weight: bold;
+            width: 100%;
+            font-size: 1rem;
+            max-width: 300px;
+            margin-top: 2rem;
+    
+            &:hover {
+                background-color: darken($yellow, 10%);
+            }
+
+            input {
+                background: none;
+                color: inherit;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;
+            }
         }
     }
 }

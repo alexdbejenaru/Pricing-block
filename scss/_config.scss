@@ -29,14 +29,14 @@ a {
     text-decoration: none;
 }
 
-.parent {
-    @media only screen and (min-width: 62.5em) {
-        display: grid;
+@mixin responsive_mid {
+    @media screen and (min-width: 700px) {
+        @content;
     }
 }
 
-@mixin resp {
-    @media screen and (min-width: 768px) {
+@mixin responsive_xl {
+    @media screen and (min-width: 1024px) {
         @content;
     }
 }
