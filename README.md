@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://alexdbejenaru.github.io/Pricing-block/)
+- Solution URL: https://alexdbejenaru.github.io/Pricing_Block/
 
 ### Built with
 
